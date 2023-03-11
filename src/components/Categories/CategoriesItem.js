@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CategoriesItem({ category, threadFilterByCategories }) {
+function CategoriesItem({ category }) {
   return (
     <div className="thread-item__category">
-      <button type="button" onClick={threadFilterByCategories}>{`#${category}`}</button>
+      <p>{`#${category}`}</p>
     </div>
   );
 }
 
 CategoriesItem.propTypes = {
   category: PropTypes.string.isRequired,
-  threadFilterByCategories: PropTypes.string.isRequired,
 };
 
 export default CategoriesItem;

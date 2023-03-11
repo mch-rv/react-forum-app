@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CategoriesItem from './CategoriesItem';
 
-function CategoriesList({ threads, threadFilterByCategories }) {
+function CategoriesList({ threads }) {
   return (
     <div className="categories-list">
       {
         threads.map((thread) => (
-          <CategoriesItem
-            key={thread.id}
-            {...thread}
-            threadFilterByCategories={threadFilterByCategories}
-          />
+          <CategoriesItem key={thread.id} {...thread} />
         ))
       }
     </div>
@@ -32,7 +28,6 @@ const threadsItemShape = {
 
 CategoriesList.propTypes = {
   threads: PropTypes.arrayOf(PropTypes.shape(threadsItemShape)).isRequired,
-  threadFilterByCategories: PropTypes.func.isRequired,
 };
 
 export default CategoriesList;
