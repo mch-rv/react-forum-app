@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "e2e": "npm run e2e"
+    "e2e": "cypress run"
   },
   "eslintConfig": {
     "extends": [

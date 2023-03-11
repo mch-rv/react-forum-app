@@ -10,7 +10,11 @@ function CategoriesItem({ category }) {
 }
 
 CategoriesItem.propTypes = {
-  category: PropTypes.string.isRequired,
+  category: PropTypes.string,
+};
+
+CategoriesItem.defaultProps = {
+  category: null,
 };
 
 export default CategoriesItem;
