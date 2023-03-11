@@ -48,19 +48,21 @@ function toggleDownVoteThreadDetailActionCreator({ threadId, userId }) {
   };
 }
 
-function clearUpVoteThreadDetailActionCreator(userId) {
+function clearUpVoteThreadDetailActionCreator({ threadId, userId }) {
   return {
     type: ActionType.CLEAR_UPVOTE_THREAD_DETAIL,
     payload: {
+      threadId,
       userId,
     },
   };
 }
 
-function clearDownVoteThreadDetailActionCreator(userId) {
+function clearDownVoteThreadDetailActionCreator({ threadId, userId }) {
   return {
     type: ActionType.CLEAR_DOWNVOTE_THREAD_DETAIL,
     payload: {
+      threadId,
       userId,
     },
   };
@@ -145,7 +147,7 @@ function asyncToogleDownVoteThreadDetail({ threadId }) {
       await api.toggleDownVoteThread({ threadId });
     } catch (error) {
       alert(error.message);
-      dispatch(toggleDownVoteCommentActionCreator({ threadId, userId: authUser.id }));
+      dispatch(toggleDownVoteThreadDetailActionCreator({ threadId, userId: authUser.id }));
     }
     dispatch(hideLoading());
   };
@@ -156,12 +158,13 @@ function asyncClearUpVoteToggleThreadDetail({ threadId }) {
     dispatch(showLoading());
 
     const { authUser } = getState();
-    dispatch(clearUpVoteThreadDetailActionCreator(authUser.id));
+    dispatch(clearUpVoteThreadDetailActionCreator({ threadId, userId: authUser.id }));
 
     try {
-      await api.toggleNeutralizeVoteThread({ threadId });
+      await api.toggleNeutralizeVoteThread({ threadId, userId: authUser.id });
     } catch (error) {
       alert(error.message);
+      dispatch(clearUpVoteThreadDetailActionCreator({ threadId, userId: authUser.id }));
     }
 
     dispatch(hideLoading());
@@ -173,12 +176,13 @@ function asyncClearDownVoteToggleThreadDetail({ threadId }) {
     dispatch(showLoading());
 
     const { authUser } = getState();
-    dispatch(clearDownVoteThreadDetailActionCreator(authUser.id));
+    dispatch(clearDownVoteThreadDetailActionCreator({ threadId, userId: authUser.id }));
 
     try {
       await api.toggleNeutralizeVoteThread({ threadId });
     } catch (error) {
       alert(error.message);
+      dispatch(clearDownVoteThreadDetailActionCreator({ threadId, userId: authUser.id }));
     }
 
     dispatch(hideLoading());

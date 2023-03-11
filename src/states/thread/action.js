@@ -6,8 +6,8 @@ const ActionType = {
   ADD_THREAD: 'threads/add',
   TOGGLE_UPVOTE_THREAD: 'threads/toggleUpVote',
   TOGGLE_DOWNVOTE_THREAD: 'threads/toggleDownVote',
-  CLEAR_UPVOTE_THREAD: 'threads/ClearUpVote',
-  CLEAR_DOWNVOTE_THREAD: 'threads/ClearDownVote',
+  CLEAR_UPVOTE_THREAD: 'threads/clearUpVote',
+  CLEAR_DOWNVOTE_THREAD: 'threads/clearDownVote',
 };
 
 function receiveThreadsActionCreator(threads) {
@@ -123,6 +123,7 @@ function asyncClearUpVoteToggleThread({ threadId }) {
       await api.toggleNeutralizeVoteThread({ threadId, userId: authUser.id });
     } catch (error) {
       alert(error.message);
+      dispatch(clearUpVoteThreadActionCreator({ threadId, userId: authUser.id }));
     }
 
     dispatch(hideLoading());
@@ -140,6 +141,7 @@ function asyncClearDownVoteToggleThread({ threadId }) {
       await api.toggleNeutralizeVoteThread({ threadId, userId: authUser.id });
     } catch (error) {
       alert(error.message);
+      dispatch(clearDownVoteThreadActionCreator({ threadId, userId: authUser.id }));
     }
 
     dispatch(hideLoading());
