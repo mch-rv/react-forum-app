@@ -20,7 +20,7 @@ function ThreadInput({ onAddThread }) {
     <form className="thread-input">
       <input type="text" placeholder="Judul" value={title} onChange={setTitle} required />
       <input type="text" placeholder="Kategori" value={category} onChange={setCategory} required />
-      <textarea type="text" placeholder=" " value={body} onChange={setBody} required />
+      <textarea type="text" data-testid="body" placeholder=" " value={body} onChange={setBody} required />
       <button type="button" onClick={onAddthread}>Post Thread</button>
     </form>
   );

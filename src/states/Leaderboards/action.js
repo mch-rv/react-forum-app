@@ -18,7 +18,7 @@ function asyncReceiveLeaderboard() {
   return async (dispatch) => {
     dispatch(showLoading());
     try {
-      const leaderboards = await api.getLeaderboars();
+      const leaderboards = await api.getLeaderboards();
       dispatch(receiveLeaderboardsActionCreator(leaderboards));
     } catch (error) {
       alert(error.message);

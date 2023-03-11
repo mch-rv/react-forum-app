@@ -278,15 +278,6 @@ body {
   background-color:white;
 }
 
-.thread-item__category button{
-  font-family: 'Quicksand', sans-serif;
-  width: fit-content;
-  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-  border-radius: 0.2rem;
-  border: 0;
-  background-color:white;
-}
-
 .thread-item__user-info {
   flex: 1;
 }

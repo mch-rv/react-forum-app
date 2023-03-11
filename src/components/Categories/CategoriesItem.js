@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function CategoriesItem({ category }) {
   return (
     <div className="thread-item__category">
-      <p>{`#${category}`}</p>
+      <p data-testid="categories">{`#${category}`}</p>
     </div>
   );
 }
