@@ -1,13 +1,19 @@
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
-import { setAuthUserActionCreator, asyncSetAuthUser } from './action';
+import {
+  setAuthUserActionCreator, asyncSetAuthUser,
+} from './action';
 /**
  * skenario test
  *
- * - asyncPopulateUsersAndThreads thunk
+ * - asyncSetAuthUser thunk
  *  - should dispatch action correctly when data fetching success
  *  - should dispatch action and call alert correctly when data fetching failed
- */
+ *
+ * - asyncUnsetAuthUser thunk
+ *  - should dispatch action correctly when data fetching success
+ *  - should dispatch action and call alert correctly when data fetching failed
+*/
 
 const fakeLoginResponse = {
   data: {
@@ -32,7 +38,7 @@ const fakeUserData = {
 
 const fakeErrorResponse = new Error('Ups, something went wrong');
 
-describe('asyncPopulateUsersAndThreads thunk', () => {
+describe('asyncSetAuthUser thunk', () => {
   beforeEach(() => {
     // backup original implementation
     api._login = api.login;
