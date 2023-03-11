@@ -7,7 +7,7 @@
  *   - should display login page when name, email and password not empty
  */
 
-describe('Login spec', () => {
+describe('Register spec', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/register');
   });
