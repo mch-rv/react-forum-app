@@ -2,15 +2,15 @@ import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 
 const ActionType = {
-  RECEIVE_THREAD_DETAIL: 'RECEIVE_THREAD_DETAIL',
-  CLEAR_THREAD_DETAIL: 'CLEAR_THREAD_DETAIL',
-  TOGGLE_UPVOTE_THREAD_DETAIL: 'TOGGLE_UPVOTE_THREAD_DETAIL',
-  TOGGLE_DOWNVOTE_THREAD_DETAIL: 'TOGGLE_DOWNVOTE_THREAD_DETAIL',
-  CLEAR_UPVOTE_THREAD_DETAIL: 'CLEAR_UPVOTE_THREAD_DETAIL',
-  CLEAR_DOWNVOTE_THREAD_DETAIL: 'CLEAR_DOWNVOTE_THREAD_DETAIL',
-  ADD_COMMENT: 'ADD_COMMENT',
-  TOGGLE_UPVOTE_COMMENT: 'TOGGLE_UPVOTE_COMMENT',
-  TOGGLE_DOWNVOTE_COMMENT: 'TOGGLE_DOWNVOTE_COMMENT',
+  RECEIVE_THREAD_DETAIL: 'threadDetail/receive',
+  CLEAR_THREAD_DETAIL: 'threadDetail/clear',
+  TOGGLE_UPVOTE_THREAD_DETAIL: 'threadDetail/toggleUpVote',
+  TOGGLE_DOWNVOTE_THREAD_DETAIL: 'threadDetail/toggleDownVote',
+  CLEAR_UPVOTE_THREAD_DETAIL: 'threadDetail/clearUpVote',
+  CLEAR_DOWNVOTE_THREAD_DETAIL: 'threadDetail/clearDownVote',
+  ADD_COMMENT: 'comment/add',
+  TOGGLE_UPVOTE_COMMENT: 'comment/toggleUpVote',
+  TOGGLE_DOWNVOTE_COMMENT: 'comment/toggleDownVote',
 };
 
 function receiveThreadDetailActionCreator(detailThread) {

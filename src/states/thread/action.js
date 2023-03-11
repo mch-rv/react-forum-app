@@ -2,12 +2,12 @@ import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 
 const ActionType = {
-  RECEIVE_THREADS: 'RECEIVE_THREADS',
-  ADD_THREAD: 'ADD_THREAD',
-  TOGGLE_UPVOTE_THREAD: 'TOGGLE_UPVOTE_THREAD',
-  TOGGLE_DOWNVOTE_THREAD: 'TOGGLE_DOWNVOTE_THREAD',
-  CLEAR_UPVOTE_THREAD: 'CLEAR_UPVOTE_THREAD',
-  CLEAR_DOWNVOTE_THREAD: 'CLEAR_DOWNVOTE_THREAD',
+  RECEIVE_THREADS: 'threads/receive',
+  ADD_THREAD: 'threads/add',
+  TOGGLE_UPVOTE_THREAD: 'threads/toggleUpVote',
+  TOGGLE_DOWNVOTE_THREAD: 'threads/toggleDownVote',
+  CLEAR_UPVOTE_THREAD: 'threads/ClearUpVote',
+  CLEAR_DOWNVOTE_THREAD: 'threads/ClearDownVote',
 };
 
 function receiveThreadsActionCreator(threads) {
