@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Card from '../Styled/Card';
 
 function CategoriesItem({ category }) {
   return (
-    <div className="thread-item__category">
+    <Card padding="0.5rem" borderRadius="5px">
       <p data-testid="categories">{`#${category}`}</p>
-    </div>
+    </Card>
   );
 }
 

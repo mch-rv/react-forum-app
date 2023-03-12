@@ -57,7 +57,7 @@ function ThreadItem({
   };
 
   return (
-    <div>
+    <>
       <div role="button" tabIndex={0} className="thread-item" onClick={onThreadClick} onKeyDown={onThreadPress}>
         <div className="thread-item__user-photo">
           <img src={user.avatar} alt={user} />
@@ -110,7 +110,7 @@ function ThreadItem({
           {user.name}
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
