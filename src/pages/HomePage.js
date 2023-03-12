@@ -11,7 +11,6 @@ import {
   asyncClearDownVoteToggleThread,
 } from '../states/thread/action';
 import Container from '../components/Styled/Container';
-import Card from '../components/Styled/Card';
 import Title from '../components/Styled/Title';
 
 function HomePage() {
