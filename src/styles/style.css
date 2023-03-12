@@ -101,56 +101,37 @@ body {
   margin: 0 auto;
 }
 
-.home-page .home-page__title{
+.home-page__title{
   font-size: 2rem;
   color:white;
   margin: 1.5rem 0 1rem 0rem;
 }
 
-.home-page header .home-page__header-title{
+.home-page__header-title{
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color:white;
 }
 
 
-.leaderboards-page{
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color:white;
-  padding:2rem;
-  border-radius: 10px;
-  border: 1px solid rgb(20, 20, 20, 0.3);
-}
-
-.leaderboards-page header .leaderboards-page__header{
+.leaderboards-page__header{
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color:var(--dark-color);
 }
 
-.leaderboards-page .leaderboards-page__header-title{
+.leaderboards-page__header-title{
   display:flex;
   justify-content: space-between;
 }
 
-.leaderboards-page .leaderboards-page__title{
+.leaderboards-page__title{
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color:var(--dark-color);
 }
 
-.navigation {
-  background-color:var(--accent-color);
-  min-height: 55px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  padding: 1rem 3rem 1rem;
-}
-
-.navigation img {
+.NavBar img {
   width: 3rem;
   vertical-align: middle;
   border-radius: 50%;
@@ -159,26 +140,26 @@ body {
   background-color:white;
 }
 
-.navigation nav {
+.NavBar nav {
   flex: 1;
 }
 
-.navigation nav a{
+.NavBar nav a{
   margin-right:15px;
 }
 
-.navigation nav a:hover{
+.NavBar nav a:hover{
   color:var(--dark-color)
 }
 
-.navigation nav a {
+.NavBar nav a {
   color:white;
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
 }
 
-.navigation button{
+.NavBar button{
   color:white;
   border: 0;
   background-color: transparent;
@@ -188,7 +169,7 @@ body {
   cursor: pointer;
 }
 
-.navigation button:hover{
+.NavBar button:hover{
   color:var(--dark-color)
 }
 
@@ -407,14 +388,6 @@ body {
   margin-top:0.3rem;
 }
 
-.detail-page {
-  max-width: 1000px;
-  display:block;
-  justify-content:center;
-  width: 90%;
-  margin: 0 auto;
-}
-
 .detail-page h2{
   color:white;
   margin:1rem 0 1rem;
@@ -555,21 +528,6 @@ body {
   gap: 16px;
   bottom: 32px;
   right: 32px;
-}
-
-.home-page__action .action{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  width: 50px;
-  height: 50px;
-  border:0;
-  border-radius: 50px;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 8px;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 850px) {

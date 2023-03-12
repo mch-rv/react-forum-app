@@ -14,6 +14,7 @@ import {
   asyncClearUpVoteToggleThreadDetail,
   asyncClearDownVoteToggleThreadDetail,
 } from '../states/threadDetail/action';
+import Container from '../components/Styled/Container';
 
 function DetailPage() {
   const { id } = useParams();
@@ -60,7 +61,7 @@ function DetailPage() {
   }
 
   return (
-    <section className="detail-page">
+    <Container>
       <ThreadDetail
         {...detailThread}
         authUser={authUser.id}
@@ -81,7 +82,7 @@ function DetailPage() {
         onCommentUpVote={onCommentUpVote}
         onCommentDownVote={onCommentDownVote}
       />
-    </section>
+    </Container>
   );
 }
 

@@ -10,6 +10,9 @@ import {
   asyncClearUpVoteToggleThread,
   asyncClearDownVoteToggleThread,
 } from '../states/thread/action';
+import Container from '../components/Styled/Container';
+import Card from '../components/Styled/Card';
+import Title from '../components/Styled/Title';
 
 function HomePage() {
   const {
@@ -51,23 +54,25 @@ function HomePage() {
   }));
 
   return (
-    <section className="home-page">
-      <header>
-        <p className="home-page__header-title">Kategori popular</p>
-        <CategoriesList threads={filterThreads} />
-      </header>
-      <h2 className="home-page__title">Diskusi Tersedia</h2>
-      <ThreadList
-        threads={threadList}
-        upVote={onUpVote}
-        downVote={onDownVote}
-        onNeutralUpVote={onNeutralUpVote}
-        onNeutralDownVote={onNeutralDownVote}
-      />
-      <div className="home-page__action">
-        <ButtonAdd />
-      </div>
-    </section>
+    <Container margin="0 auto 2rem">
+      <section>
+        <header>
+          <Title>Kategori popular</Title>
+          <CategoriesList threads={filterThreads} />
+        </header>
+        <h2 className="home-page__title">Diskusi Tersedia</h2>
+        <ThreadList
+          threads={threadList}
+          upVote={onUpVote}
+          downVote={onDownVote}
+          onNeutralUpVote={onNeutralUpVote}
+          onNeutralDownVote={onNeutralDownVote}
+        />
+        <div className="home-page__action">
+          <ButtonAdd />
+        </div>
+      </section>
+    </Container>
   );
 }
 

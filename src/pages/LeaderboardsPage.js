@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { asyncReceiveLeaderboard } from '../states/Leaderboards/action';
 import LeaderboardList from '../components/Leaderboard/LeaderboardList';
+import Container from '../components/Styled/Container';
+import Card from '../components/Styled/Card';
 
 function HomePage() {
   const {
@@ -19,18 +21,20 @@ function HomePage() {
   }));
 
   return (
-    <section className="leaderboards-page">
-      <header>
-        <h2 className="leaderboards-page__header">Klasmen Pengguna Aktif</h2>
-      </header>
-      <div className="leaderboards-page__header-title">
-        <p className="leaderboards-page__title">Pengguna</p>
-        <p className="leaderboards-page__title">Skor</p>
-      </div>
-      <article>
-        <LeaderboardList leaderboards={leaderboardsList} />
-      </article>
-    </section>
+    <Container margin="0 auto 3rem">
+      <Card>
+        <header>
+          <h2 className="leaderboards-page__header">Klasmen Pengguna Aktif</h2>
+        </header>
+        <div className="leaderboards-page__header-title">
+          <p className="leaderboards-page__title">Pengguna</p>
+          <p className="leaderboards-page__title">Skor</p>
+        </div>
+        <article>
+          <LeaderboardList leaderboards={leaderboardsList} />
+        </article>
+      </Card>
+    </Container>
   );
 }
 
